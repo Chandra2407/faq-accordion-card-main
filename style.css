@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* #### Text */
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /* #### Gradient */
+    /* Background gradient: */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /* ### Neutral
+#### Text */
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* #### Dividers */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #af69e8;
+    background-image: linear-gradient(180deg, #af69e8 0%, #6565e7 100%);
+    /* height: 100vh;
+    max-height: auto; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    min-height: 500px;
+    max-height: auto;
+    text-align: left;
+    margin-top: 120px;
+}
+
+.card .imageHolder {
+    background: url('images/illustration-woman-online-mobile.svg') no-repeat center/cover;
+    height: 190px;
+    width: 266px;
+    margin-top: -30%;
+    margin-right: 30px;
+}
+
+.card .contents {
+    min-height: 70%;
+    max-height: 70%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card h1 {
+    margin: 10px auto 0px;
+    
+}
+
+.card .items {
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.card .items .questions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 11px 10px;
+}
+
+.card .items .questions p {
+    cursor: pointer;
+    margin: 0px 20px;
+    transition: color ease-in-out 0.2;
+}
+
+.card .items .questions p:hover {
+    color: var(--soft-red);
+}
+
+.active {
+    font-weight: bold;
+}
+
+.card .items .questions .arrow {
+    cursor: pointer;
+    width: 10px;
+    height: 7px;
+    transition: all ease-in-out 0.3s;
+}
+
+.active-arrow {
+    transform: rotate(180deg);
+}
+
+.card .items .answers {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0px 30px;
+    margin-right: 30px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.attribution {
+    margin: 12px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(0, 88%, 66%);
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        height: 100vh;
+    }
+
+    .card {
+        display: flex;
+        width: 900px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .card .contents {
+        width: 50%;
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .card .contents h1{
+        margin-left: 50px;
+    }
+    .card .imageHolder {
+        margin-top:0;
+        height: 196px;
+    }
+}
